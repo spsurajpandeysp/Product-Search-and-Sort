@@ -25,7 +25,7 @@ Implement the JavaScript logic for **searching and sorting products** by complet
 
 
 ### 1. Replace Hardcoded Values
-- Replace the hardcoded text inside <h3>, **<p> and <p class="price">**:
+- Replace the hardcoded text inside **<h3>, <p> and <p>**:
 - Use the actual values from the product object: **title, category and price**.
 
 ### 2. `handleSearch()`
