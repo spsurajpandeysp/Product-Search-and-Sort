@@ -20,68 +20,79 @@ function renderProducts(data) {
     return;
   }
 
-  data.forEach(product => {
+  for (const product of data) {
     const div = document.createElement("div");
     div.className = "card";
+
+    // Replace the hardcoded value from h3, p, and p to actual object value.
+
     div.innerHTML = `
-      <h3>${product.title}</h3>
-      <p>${product.category}</p>
-      <p class="price">₹${product.price}</p>
-    `;
+    <h3>${product.title}</h3>  
+    <p>${product.category}</p>
+    <p class="price">${product.price}</p>
+  `;
     container.appendChild(div);
-  });
+  }
+
 }
 
 
 
-renderProducts(products);
 
 
 
-// Write Search code here
+
+
 function handleSearch() {
   const searchValue = document
     .getElementById("searchInput")
     .value
     .toLowerCase();
 
-  filteredProducts = [];
 
+    filteredProducts = [];
+    // Write Search code here. 
+    // Searching is based on the title of the product and push into the filteredProducts array.
+
+  
   for (const product of products) {
     if (product.title.toLowerCase().includes(searchValue)) {
       filteredProducts.push(product);
     }
   }
-
   handleSort();
 }
 
 
 
 
-// Write Sorting Code here
+
 function handleSort() {
   const sortValue = document.getElementById("sortPrice").value;
+  // Write Sorting Code here you can use inbuild or and other sorting algorithm. 
+  // and pass the sorted data to the renderProducts function.
 
-  let dataToShow = [];
-  for (const product of filteredProducts) {
-    dataToShow.push(product);
-  }
-
-  for (let i = 0; i < dataToShow.length - 1; i++) {
-    for (let j = i + 1; j < dataToShow.length; j++) {
+  for (let i = 0; i < filteredProducts.length - 1; i++) {
+    for (let j = i + 1; j < filteredProducts.length; j++) {
 
       if (
-        (sortValue === "asc" && dataToShow[i].price > dataToShow[j].price) ||
-        (sortValue === "desc" && dataToShow[i].price < dataToShow[j].price)
+        (sortValue === "asc" && filteredProducts[i].price > filteredProducts[j].price) ||
+        (sortValue === "desc" && filteredProducts[i].price < filteredProducts[j].price)
       ) {
-        let temp = dataToShow[i];
-        dataToShow[i] = dataToShow[j];
-        dataToShow[j] = temp;
+        let temp = filteredProducts[i];
+        filteredProducts[i] = filteredProducts[j];
+        filteredProducts[j] = temp;
       }
 
     }
   }
 
-  renderProducts(dataToShow);
+
+
+  renderProducts(filteredProducts);
 }
+
+
+
+renderProducts(products);
+
