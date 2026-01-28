@@ -22,13 +22,19 @@ A user interface is already provided with:
 
 Implement the JavaScript logic for **searching and sorting products** by completing the following two functions:
 
-### 1. `handleSearch()`
+
+
+### 1. Replace Hardcoded Values
+- Replace the hardcoded text inside <h3>, **<p> and <p class="price">**:
+- Use the actual values from the product object: **title, category and price**.
+
+### 2. `handleSearch()`
 - Filter the product list **only based on the product title**.
 - The search must be **case-insensitive**.
 - If the search input is empty, display **all products**.
 - After filtering, apply the currently selected price sorting (if any).
 
-### 2. `handleSort()`
+### 3. `handleSort()`
 - Sort the currently displayed products based on their `price`.
 - If **Ascending** is selected, sort products from **low to high price**.
 - If **Descending** is selected, sort products from **high to low price**.
