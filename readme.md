@@ -20,12 +20,12 @@ A user interface is already provided with:
 
 ## Your Task
 
-Implement the JavaScript logic for **searching and sorting products** by completing the following two functions:
+Implement the JavaScript logic for **searching and sorting products** by completing the following two functions in the **script.js** file do not change in any other file:
 
 
 
 ### 1. Replace Hardcoded Values
-- Replace the hardcoded text inside **<h3>, <p> and <p>**:
+- Replace the hardcoded text inside **h3 tag for title, p tag for category and p tag for price**:
 - Use the actual values from the product object: **title, category and price**.
 
 ### 2. `handleSearch()`
