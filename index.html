@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Search & Sort</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Product List</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search by title...">
+    <button onclick="handleSearch()">Search</button>
+
+    <select id="sortPrice" onchange="handleSort()">
+      <option value="asc">Low to High</option>
+      <option value="desc">High to Low</option>
+    </select>
+  </div>
+
+  <div id="productContainer" class="products"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
